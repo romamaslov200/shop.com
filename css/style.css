@@ -21,6 +21,7 @@ body
 }
 .product
 {
+    transition: 3s;
     margin: 40px 5vw;
     border: 2.5px #000 solid;
     background-color: #AAF7BE;
@@ -52,21 +53,30 @@ body
     border: 2.5px #000 solid;
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 10px;
     background-color: #AAF7BE;
     box-shadow:0px 2px 5px #000;
-    padding: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 
 }
+.menu_li
+{
+    padding: 10px;
+}
 .menu_text
 {
+    padding: 5px;
+    border-radius: 10px;
     text-decoration: none;
     font-family: 'Shantell Sans';
     font-size: 1vmin;
     font-size: 1.5vmax;
     color: #000000;
+}
+.menu_text:hover
+{
+    background-color: #95D8A7;
 }
 
 @media (max-width: 1024px) {
@@ -106,10 +116,10 @@ body
     }
     .menu
     {
+        transition: 3s;
         display: flex;
         list-style: none;
         gap: 20px;
-        padding: 10px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
 
