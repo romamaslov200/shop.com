@@ -21,7 +21,8 @@ body
 }
 .product
 {
-    transition: 3s;
+    transition: 2s;
+    overflow: hidden;
     margin: 40px 5vw;
     border: 2.5px #000 solid;
     background-color: #AAF7BE;
