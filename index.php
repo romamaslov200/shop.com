@@ -1,3 +1,6 @@
+<?php
+include "include/functions.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +11,9 @@
     <title>Document</title>
 </head>
 <body>
-
-    <ul class="menu">
-        <li><a class="menu_text" href="">Главная</a></li>
-        <li><a class="menu_text" href="">Главная</a></li>
-        <li><a class="menu_text" href="">Главная</a></li>
-    </ul>
-
+    <?php
+    menu();
+    ?>
     <div class="list_product">
         <div class="product">
             <img class="img_product" src="https://www.pngarts.com/files/4/Dress-Shirt-PNG-Transparent-Image.png" alt="">

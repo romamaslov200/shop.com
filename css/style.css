@@ -65,6 +65,7 @@ body
     font-size: 2vmax;
     color: #000000;
 }
+
 @media (max-width: 1024px) {
     .list_product
     {

@@ -1,3 +1,6 @@
+<?php
+include "include/functions.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,21 +11,17 @@
     <title>Document</title>
 </head>
 <body>
-
-    <ul class="menu">
-        <li><a class="menu_text" href="">Главная</a></li>
-        <li><a class="menu_text" href="">Главная</a></li>
-        <li><a class="menu_text" href="">Главная</a></li>
-    </ul>
-
-    <div class="list_product">
-        <div class="product">
-            <img class="img_product" src="https://www.pngarts.com/files/4/Dress-Shirt-PNG-Transparent-Image.png" alt="">
-            <div>
+    <?php
+    menu();
+    ?>
+    <div class="product-viv-grid">
+        <div class="product-viv">
+                <img class="img_product" src="https://www.pngarts.com/files/4/Dress-Shirt-PNG-Transparent-Image.png" alt="">
+                <div>
                 <p class="title_product">Рубашка муржска</p>
                 <p class="text_product">Стильная муржская рубашка</p>
             </div>
         </div>
-        
+    </div>
 </body>
 </html>
