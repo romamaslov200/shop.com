@@ -1,0 +1,158 @@
+@font-face {
+	font-family: 'Shantell Sans'; 
+	src: url(/fonts/ShantellSans-VariableFont_BNCE,INFM,SPAC,wght.ttf); 
+}
+
+*
+{
+    margin: 0;
+}
+body
+{
+    background-color: aquamarine;
+}
+.list_product
+{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 0fr 0fr 0fr;
+    justify-content: center;
+}
+.product
+{
+    margin: 40px 5vw;
+    border: 5px #000 solid;
+    background-color: aliceblue;
+    border-radius: 40px;
+    width: 15vw;
+    padding: 15px;
+}
+.img_product
+{
+    border-radius: 20px;
+    max-width: 15vw;
+}
+.title_product
+{
+    /*font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: 'Shantell Sans';
+    font-size: 1.5vw;
+}
+.text_product
+{
+    margin: 10px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+}
+.menu
+{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    background-color: #a4dbdb;
+    box-shadow:1px 4px 10px #000;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.menu_text
+{
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2vmin;
+    font-size: 2vmax;
+    color: #000000;
+}
+@media (max-width: 1024px) {
+    .list_product
+    {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 0fr 0fr;
+        justify-content: center;
+    }
+    .product
+    {
+        margin: 20px 5vw;
+        border: 5px #000 solid;
+        background-color: aliceblue;
+        border-radius: 40px;
+        width: 30vw;
+        padding: 10px;
+        scale: 0.9;
+    }
+    .img_product
+    {
+        border-radius: 20px;
+        max-width: 30vw;
+    }
+    .title_product
+    {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 2.5vw;
+    }
+    .text_product
+    {
+        margin: 10px;
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 1.5vw;
+    }
+    .menu
+    {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        background-color: #a4dbdb;
+        box-shadow:1px 4px 10px #000;
+        padding: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+    }
+    .menu_text
+    {
+        text-decoration: none;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 2vmin;
+        font-size: 2vmax;
+        color: #000000;
+    }
+}
+@media (max-width: 720px) {
+    .list_product
+    {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 0fr;
+        justify-content: center;
+    }
+    .product
+    {
+        margin: 20px 5vw;
+        border: 5px #000 solid;
+        background-color: aliceblue;
+        border-radius: 40px;
+        width: 50vw;
+        padding: 10px;
+    }
+    .img_product
+    {
+        border-radius: 20px;
+        max-width: 30vw;
+    }
+    .title_product
+    {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 4.5vw;
+    }
+    .text_product
+    {
+        margin: 10px;
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 3vw;
+    }
+  }
