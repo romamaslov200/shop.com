@@ -22,7 +22,7 @@ body
 {
     margin: 40px 5vw;
     border: 5px #000 solid;
-    background-color: #72F796;
+    background-color: #AAF7BE;
     border-radius: 40px;
     width: 15vw;
     padding: 15px;
@@ -51,7 +51,7 @@ body
     display: flex;
     list-style: none;
     gap: 20px;
-    background-color: #a4dbdb;
+    background-color: #8BCA9C;
     box-shadow:0px 1px 10px #000;
     padding: 10px;
     border-bottom-left-radius: 10px;
