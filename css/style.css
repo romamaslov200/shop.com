@@ -29,7 +29,7 @@
 
     --menu-bg: #39393a;
     --menu-text-color: #fff;
-    --menu-hover-bg: #AAF7BE;
+    --menu-hover-bg: #535353;
 
     --btn1-bg-: #7cb18a;
 }
@@ -141,6 +141,16 @@ body, html
     padding: 10px;
     border-radius: 10px;
 }
+
+
+#topNubex {
+    display: none;
+	position: fixed;
+	right: 25px;
+	bottom: 25px;
+    scale: 0.7;
+}
+
 
 @media (max-width: 1024px) {
     .list_product
