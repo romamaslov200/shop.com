@@ -14,7 +14,9 @@
 
     --menu-bg: #AAF7BE;
     --menu-text-color: #000000;
-    --menu-hover-bg: #AAF7BE;    
+    --menu-hover-bg: #AAF7BE;
+
+    --btn1-bg-: #7cb18a;
 }
 
 
@@ -116,14 +118,16 @@ body, html
     max-width: 500px;
     width: 30vw;
 }
+
 .btn1
 {
-    background-color: #7cb18a;
+    background-color: var(--btn1-bg-);
     border: 0;
     font-size: 1.5vw;
     padding: 10px;
     border-radius: 10px;
 }
+
 @media (max-width: 1024px) {
     .list_product
     {
