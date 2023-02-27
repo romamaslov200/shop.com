@@ -17,7 +17,7 @@ include "include/functions.php";
     <div class="wrapper">
         <div class="list_product">
             <div class="product">
-                <img class="img_product" src="https://ae01.alicdn.com/kf/HTB16E9XSVXXXXaeaXXXq6xXFXXXu/2017-s.jpg" alt="">
+                <img class="img_product" src="img/2a50293b87dbea0a14e59b2affc1263b-benzin-preview.png" alt="">
                 <div>
                     <p class="title_product">Рубашка муржска</p>
                     <p class="text_product">Стильная муржская рубашка</p>
@@ -25,14 +25,14 @@ include "include/functions.php";
                 </div>
             </div>
             <div class="product">
-                <img class="img_product" src="https://i4.stat01.com/1/7425/74240100/afacdb/wrangler-ssha.jpg" alt="">
+                <img class="img_product" src="img/2a50293b87dbea0a14e59b2affc1263b-benzin-preview.png" alt="">
                 <div>
                     <p class="title_product">Рубашка муржска</p>
                     <p class="text_product">Стильная муржская рубашка</p>
                 </div>
             </div>
             <div class="product">
-                <img class="img_product" src="https://www.pngarts.com/files/4/Dress-Shirt-PNG-Transparent-Image.png" alt="">
+                <img class="img_product" src="img/2a50293b87dbea0a14e59b2affc1263b-benzin-preview.png" alt="">
                 <div>
                     <p class="title_product">Рубашка муржска</p>
                     <p class="text_product">Стильная муржская рубашка</p>

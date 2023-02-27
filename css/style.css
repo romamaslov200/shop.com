@@ -4,21 +4,35 @@
 }
 
 
-:root{
-    --body-bg: aquamarine;
+/* :root{
+    --body-bg: #2f313d;
     
-    --text-color: #00;
+    --text-color: #fff;
     --linc-text: #000;
 
-    --product-bg: #AAF7BE;
+    --product-bg: #575a69;
 
-    --menu-bg: #AAF7BE;
-    --menu-text-color: #000000;
+    --menu-bg: #575a69;
+    --menu-text-color: #fff;
+    --menu-hover-bg: #AAF7BE;
+
+    --btn1-bg-: #7cb18a;
+} */
+
+:root{
+    --body-bg: #29292c;
+    
+    --text-color: #bad1f8;
+    --linc-text: #000;
+
+    --product-bg: #39393a;
+
+    --menu-bg: #39393a;
+    --menu-text-color: #fff;
     --menu-hover-bg: #AAF7BE;
 
     --btn1-bg-: #7cb18a;
 }
-
 
 *
 {
