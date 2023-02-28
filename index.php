@@ -18,9 +18,18 @@ include "include/functions.php";
         <div class="list_product">
             <div class="product">
                 <img class="img_product" src="img/2a50293b87dbea0a14e59b2affc1263b-benzin-preview.png" alt="">
+                <div href="wedas">
+                    <a href="grefwsa" class="title_product">Рубашка муржская</a>
+                    <a class="price">100$</a>
+                    <p class="text_product">Стильная муржская рубашкая</p>
+                </div>
+            </div>
+            <div class="product">
+                <img class="img_product" src="img/2a50293b87dbea0a14e59b2affc1263b-benzin-preview.png" alt="">
                 <div>
                     <p class="title_product">Рубашка муржска</p>
-                    <p class="text_product">Стильная муржская рубашка</p>
+                    <a class="price">100$</a>
+                    <p class="text_product">Стильная муржская рубашкая</p>
                     <a href=""></a>
                 </div>
             </div>
@@ -28,50 +37,50 @@ include "include/functions.php";
                 <img class="img_product" src="img/2a50293b87dbea0a14e59b2affc1263b-benzin-preview.png" alt="">
                 <div>
                     <p class="title_product">Рубашка муржска</p>
-                    <p class="text_product">Стильная муржская рубашка</p>
+                    <a class="price">100$</a>
+                    <p class="text_product">Стильная муржская рубашкая</p>
+                    <a href=""></a>
                 </div>
             </div>
             <div class="product">
                 <img class="img_product" src="img/2a50293b87dbea0a14e59b2affc1263b-benzin-preview.png" alt="">
                 <div>
                     <p class="title_product">Рубашка муржска</p>
-                    <p class="text_product">Стильная муржская рубашка</p>
+                    <a class="price">100$</a>
+                    <p class="text_product">Стильная муржская рубашкая</p>
+                    <a href=""></a>
+                </div>
+            </div>
+            <div class="product">
+                <img class="img_product" src="img/2a50293b87dbea0a14e59b2affc1263b-benzin-preview.png" alt="">
+                <div>
+                    <p class="title_product">Рубашка муржска</p>
+                    <a class="price">100$</a>
+                    <p class="text_product">Стильная муржская рубашкая</p>
+                    <a href=""></a>
+                </div>
+            </div>
+            <div class="product">
+                <img class="img_product" src="img/2a50293b87dbea0a14e59b2affc1263b-benzin-preview.png" alt="">
+                <div>
+                    <p class="title_product">Рубашка муржска</p>
+                    <a class="price">100$</a>
+                    <p class="text_product">Стильная муржская рубашкая</p>
+                    <a href=""></a>
                 </div>
             </div>
             <div class="product">
                 <img class="img_product" src="https://www.pngarts.com/files/4/Dress-Shirt-PNG-Transparent-Image.png" alt="">
                 <div>
                     <p class="title_product">Рубашка муржска</p>
-                    <p class="text_product">Стильная муржская рубашка</p>
+                    <p class="text_product">Стильная муржская рубашкая</p>
                 </div>
             </div>
             <div class="product">
                 <img class="img_product" src="https://www.pngarts.com/files/4/Dress-Shirt-PNG-Transparent-Image.png" alt="">
                 <div>
                     <p class="title_product">Рубашка муржска</p>
-                    <p class="text_product">Стильная муржская рубашка</p>
-                </div>
-            </div>
-
-            <div class="product">
-                <img class="img_product" src="https://www.pngarts.com/files/4/Dress-Shirt-PNG-Transparent-Image.png" alt="">
-                <div>
-                    <p class="title_product">Рубашка муржска</p>
-                    <p class="text_product">Стильная муржская рубашка</p>
-                </div>
-            </div>
-            <div class="product">
-                <img class="img_product" src="https://www.pngarts.com/files/4/Dress-Shirt-PNG-Transparent-Image.png" alt="">
-                <div>
-                    <p class="title_product">Рубашка муржска</p>
-                    <p class="text_product">Стильная муржская рубашка</p>
-                </div>
-            </div>
-            <div class="product">
-                <img class="img_product" src="https://www.pngarts.com/files/4/Dress-Shirt-PNG-Transparent-Image.png" alt="">
-                <div>
-                    <p class="title_product">Рубашка муржска</p>
-                    <p class="text_product">Стильная муржская рубашка</p>
+                    <p class="text_product">Стильная муржская рубашкая</p>
                 </div>
             </div>
             <div class="product">
