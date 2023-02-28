@@ -2,8 +2,26 @@
 	font-family: 'Shantell Sans'; 
 	src: url(/fonts/ShantellSans-VariableFont_BNCE,INFM,SPAC,wght.ttf); 
 }
-
-
+@font-face {
+	font-family: 'mistral'; 
+	src: url(/fonts/mistral.ttf); 
+}
+@font-face {
+	font-family: 'foo'; 
+	src: url(/fonts/foo.ttf); 
+}
+@font-face {
+	font-family: 'ICE_AGE_RUS'; 
+	src: url(/fonts/ICE_AGE_RUS.ttf); 
+}
+@font-face {
+	font-family: 'toony_loons_rus'; 
+	src: url(/fonts/toony_loons_rus.ttf); 
+}
+@font-face {
+	font-family: 'vag-world-bold'; 
+	src: url(/fonts/vag-world-bold.ttf); 
+}
 /* :root{
     --body-bg: #2f313d;
     
@@ -45,7 +63,8 @@ body, html
     background-color: var(--body-bg);
     width: 100%;
     height: 100%;
-    font-family: 'Shantell Sans';
+    font-family: 'vag-world-bold';
+    font-style: normal;
     color: var(--text-color);
 }
 .list_product
