@@ -102,6 +102,11 @@ body, html
 {
     padding: 10px;
 }
+.menu_rigt{
+    display: flex;
+    position:fixed;
+    right: 0;
+}
 .menu_text
 {
     padding: 5px;
