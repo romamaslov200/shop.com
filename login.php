@@ -16,21 +16,20 @@ include "include/functions.php";
 
 
     if(isset($_POST['username']) && isset($_POST['password'])){
-        $username = $_POST['username'];
         $email = $_POST['email'];
+        $username = $_POST['username'];
         $password = $_POST['password'];
         $password_hash = hash('md5', $password);
 
-        $result1 = $conn->query("SELECT * FROM `users` WHERE `email` = '$email'");
+        $result1 = $conn->query("SELECT * FROM `users` WHERE `email` = '$email' and `password` = '$password_hash'");
         $user1 = $result1->fetch_assoc(); // Конвертируем в массив
+
 
         if(!empty($user1)){
             $fsmg = "Данный логин уже используется!";
         }
         else{
-            $query = ("INSERT INTO `users` (`username`, `email`, `password`) VALUES ('$username', '$email', '$password_hash')");
-            $result = mysqli_query($conn, $query);
-            $gsmg = "Вы успешно зарегистрировались!";
+            $gsmg = "Вы успешно вошли!";
         }
     }
     else{
@@ -63,7 +62,7 @@ include "include/functions.php";
                             }
 
                             ?>
-                            <label class="form_label" for="username">Имя Фамилия</label>
+                            <label class="form_label" for="email">Email</label>
                             <br>
                             <input class="input" name="username" type="text" require>
                             <br>
@@ -71,10 +70,6 @@ include "include/functions.php";
                             <label class="form_label" for="password">Пароль</label>
                             <br>
                             <input class="input" name="password" type="password" require><br>
-
-                            <label class="form_label" for="email">Email</label>
-                            <br>
-                            <input class="input" name="email" type="email" require><br>
                             
                             <input class="btn1" name="submit" type="submit" value="Зарегистрироваться" require>
 
