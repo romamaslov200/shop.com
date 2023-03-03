@@ -16,6 +16,26 @@ include "include/functions.php";
     ?>
     <div class="wrapper">
         <div class="list_product">
+        <?php
+            $sql = "SELECT * FROM `products` ORDER BY id DESC";
+            $res = $conn -> query($sql);
+            while ($resProducts = $res -> fetch_assoc()) {
+            ?>
+
+                <div class="product">
+                    <img class="img_product" src="img/2a50293b87dbea0a14e59b2affc1263b-benzin-preview.png" alt="">
+                    <div href="wedas">
+                        <a href="product?id=<?= $resProducts['price'] ?>" class="title_product"><?= $resProducts['title'] ?></a>
+                        <a class="price"><?= $resProducts['price'] ?></a>
+                        <p class="text_product">Стильная муржская рубашкая</p>
+                    </div>
+                </div>
+
+            <?php
+            }
+            ?>
+
+
             <div class="product">
                 <img class="img_product" src="img/2a50293b87dbea0a14e59b2affc1263b-benzin-preview.png" alt="">
                 <div href="wedas">

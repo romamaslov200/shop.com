@@ -13,31 +13,76 @@ include "include/functions.php";
 <body>
     <?php
     menu();
-
-
-    if(isset($_POST['username']) && isset($_POST['password'])){
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $password_hash = hash('md5', $password);
-
-        $result1 = $conn->query("SELECT * FROM `users` WHERE `email` = '$email'");
-        $user1 = $result1->fetch_assoc(); // Конвертируем в массив
-
-        if(!empty($user1)){
-            $fsmg = "Данный логин уже используется!";
-        }
-        else{
-            $query = ("INSERT INTO `users` (`username`, `email`, `password`) VALUES ('$username', '$email', '$password_hash')");
-            $result = mysqli_query($conn, $query);
-            $gsmg = "Вы успешно зарегистрировались!";
-        }
-    }
-    else{
-        echo"12312";
-    }
-
     ?>
+
+<?php
+	$data = $_POST;
+
+	function captcha_show(){
+		$questions = array(
+			1 => 'Столица России',
+			2 => 'Столица США',
+			3 => '2 + 3',
+			4 => '15 + 14',
+			5 => '45 - 10',
+			6 => '33 - 3'
+		);
+		$num = mt_rand( 1, count($questions) );
+		$_SESSION['captcha'] = $num;
+		echo $questions[$num];
+	}
+
+	//если кликнули на button
+	if ( isset($data['submit']) )
+	{
+    // проверка формы на пустоту полей
+		$errors = array();
+		if ( trim($data['username']) == '' )
+		{
+			$errors[] = 'Введите Имя и Фамилию';
+		}
+
+		if ( trim($data['email']) == '' )
+		{
+			$errors[] = 'Введите Email';
+		}
+
+		if ( $data['password'] == '' )
+		{
+			$errors[] = 'Введите пароль';
+		}
+
+		//проверка на существование одинакового логина
+		if ( R::count('users', "email = ?", array($data['email'])) > 0)
+		{
+			$errors[] = 'Пользователь с таким логином уже существует!';
+		}
+
+    //проверка на существование одинакового email
+		if ( R::count('users', "email = ?", array($data['email'])) > 0)
+		{
+			$errors[] = 'Пользователь с таким Email уже существует!';
+		}
+
+
+		if ( empty($errors) )
+		{
+			//ошибок нет, теперь регистрируем
+			$user = R::dispense('users');
+			$user->username = $data['username'];
+			$user->email = $data['email'];
+			$user->password = password_hash($data['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
+			$user->password_old = $data['password'];
+			$user->avatar = "novavatar.jpg";
+			R::store($user);
+            $msg_good[] = 'Вы успешно зарегистрированы!';
+		}
+
+	}
+
+?>
+
+
     <div class="wrapper">
         <div class="fullscreen">
             <div class="fullscreen_body_form">
@@ -46,20 +91,17 @@ include "include/functions.php";
                         <div class="form_reg">
                             <?php
                             
-                            if(isset($fsmg)){
+                            if(isset($msg_good)){
                                 ?>
                                 <div>
-                                <label class="form_label reg_good" for="username"><?= $fsmg ?></label> 
+                                <label class="form_label reg_good" for="reg_good"><?= array_shift($msg_good) ?></label>
                                 </div>
                                 <?php
                             }
-
-                            if(isset($gsmg)){
-                                ?>
-                                <div>
-                                <label class="form_label" style="color:green;" for="username"><?= $gsmg ?></label> 
-                                </div>
-                                <?php
+                            if ( ! empty($errors) )
+                            {
+                                //выводим ошибки авторизации
+                                echo '<label class="form_label reg_notgood">' .array_shift($errors). '</label><br>';
                             }
 
                             ?>

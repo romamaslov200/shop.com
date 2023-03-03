@@ -13,27 +13,32 @@ include "include/functions.php";
 <body>
     <?php
     menu();
+    ?>
 
+    <?
 
-    if(isset($_POST['username']) && isset($_POST['password'])){
-        $email = $_POST['email'];
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $password_hash = hash('md5', $password);
+    $data = $_POST;
+    if ( isset($data['submit']) )
+    {
+        $user = R::findOne('users', 'email = ?', array($data['email']));
+        if ( $user )
+        {
+            //логин существует
+            if ( password_verify($data['password'], $user->password) )
+            {
+                //если пароль совпадает, то нужно авторизовать пользователя
+                $_SESSION['logged_user'] = $user;
+                $msg_good[] = 'Вы успешно зашли';
+            }else
+            {
+                $errors[] = 'Неверно введен пароль!';
+            }
 
-        $result1 = $conn->query("SELECT * FROM `users` WHERE `email` = '$email' and `password` = '$password_hash'");
-        $user1 = $result1->fetch_assoc(); // Конвертируем в массив
-
-
-        if(!empty($user1)){
-            $fsmg = "Данный логин уже используется!";
+        }else
+        {
+            $errors[] = 'Пользователь с таким логином не найден!';
         }
-        else{
-            $gsmg = "Вы успешно вошли!";
-        }
-    }
-    else{
-        echo"12312";
+
     }
 
     ?>
@@ -44,27 +49,22 @@ include "include/functions.php";
                     <form method="POST">
                         <div class="form_reg">
                             <?php
-                            
-                            if(isset($fsmg)){
+                            if(isset($msg_good)){
                                 ?>
                                 <div>
-                                <label class="form_label reg_good" for="username"><?= $fsmg ?></label> 
+                                <label class="form_label reg_good" for="reg_good"><?= array_shift($msg_good) ?></label> 
                                 </div>
                                 <?php
                             }
-
-                            if(isset($gsmg)){
-                                ?>
-                                <div>
-                                <label class="form_label" style="color:green;" for="username"><?= $gsmg ?></label> 
-                                </div>
-                                <?php
+                            if ( ! empty($errors) )
+                            {
+                                //выводим ошибки авторизации
+                                echo '<label class="form_label reg_notgood">' .array_shift($errors). '</label><br>';
                             }
-
                             ?>
                             <label class="form_label" for="email">Email</label>
                             <br>
-                            <input class="input" name="username" type="text" require>
+                            <input class="input" name="email" type="text" require>
                             <br>
 
                             <label class="form_label" for="password">Пароль</label>
