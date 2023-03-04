@@ -46,18 +46,18 @@ if ( !isset ($_SESSION['logged_user']) || $_SESSION['logged_user']['admin_status
                             </label>
                             </div>
 
-                            <label class="form_label" for="email">Название продукта</label>
+                            <label class="form_label" for="title">Название продукта</label>
                             <br>
-                            <input class="input" name="name" type="text" require>
+                            <input class="input" name="name" type="title" require>
                             <br>
 
-                            <label class="form_label" for="password">Описание продукта</label>
+                            <label class="form_label" for="text">Описание продукта</label>
                             <br>
-                            <input class="input" name="text" type="password" require><br>
+                            <input class="input" name="text" type="text" require><br>
 
-                            <label class="form_label" for="password">Цена продукта</label>
+                            <label class="form_label" for="price">Цена продукта</label>
                             <br>
-                            <input class="input" name="price_p" type="password" require><br>
+                            <input class="input" name="price_p" type="price" require><br>
                             
                             <input class="btn1" name="update" type="submit" value="Опубликовать" require>
                     
