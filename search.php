@@ -15,10 +15,22 @@ include "include/functions.php";
     menu();
     ?>
     <div class="wrapper">
+        <div class="fullscreen_body_form">
+            <div class="content__body">
+                <form class="form_reg" action="" method="post">
+                    <div class="text_box" style="text-align: center;">
+                        <input type="text" placeholder="В ведите запрос" class="input" name="search_txt" id="">
+                        <br>
+                        <input name="search_btn" class="btn1" type="submit" value="Искать"><span class="material-icons-outlined">
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="list_product">
         <?php
-            $sql = "SELECT * FROM `products` ORDER BY id DESC";
-            $res = $conn -> query($sql);
+
+            $search = $_POST['search_txt'];
+            $res = $conn->query("SELECT * FROM `products` WHERE `title` LIKE '%" . $search . "%' ORDER BY RAND()"); // запрос на выборку
             while ($resProducts = $res -> fetch_assoc()) {
             ?>
 

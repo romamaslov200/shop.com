@@ -71,7 +71,7 @@ include "include/functions.php";
                             <br>
                             <input class="input" name="password" type="password" require><br>
                             
-                            <input class="btn1" name="submit" type="submit" value="Зарегистрироваться" require>
+                            <input class="btn1" name="submit" type="submit" value="Войти" require>
 
                         </div>
                     

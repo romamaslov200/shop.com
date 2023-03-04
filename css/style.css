@@ -52,6 +52,8 @@
 
     --btn1-bg-: #2f302f;
     --btn1-border-: solid #5e5656;
+
+    --footer-bg: #1b1b1b;
 }
 
 *
@@ -61,11 +63,22 @@
 body, html
 {
     background-color: var(--body-bg);
-    width: 100%;
     height: 100%;
     font-family: 'vag-world-bold';
     font-style: normal;
     color: var(--text-color);
+}
+
+.link
+{
+    text-decoration: dashed;
+    color: var(--menu-text-color);
+}
+
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -98,6 +111,18 @@ body, html
     max-width: 1000px;
     margin: 0px auto;
 }
+
+.footer {
+    background-color: var(--footer-bg);
+    text-align: center;
+}
+.footer__body {
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 30px 20px;
+    flex-shrink: 0;
+}
+
 
 .list_product
 {
@@ -157,6 +182,7 @@ body, html
 }
 
 .input{
+    text-align: center;
     border: 0;
     border-radius: 20px;
     transform: scale(1.5);
@@ -366,7 +392,7 @@ body, html
     width: 100%;
     max-width: 290px;
     height: 60px;
-    background: #1bbc9b;
+    background: #748f89;
     color: #fff;
     font-size: 1.125rem;
     font-weight: 700;
